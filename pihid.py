@@ -554,8 +554,10 @@ o_input_device = next(
 try:
     device = hid.device()
     device.open(
-        o_device['vendor_id'],
-        o_device['product_id'],
+        0x045e,
+        0x028e,
+        # o_device['vendor_id'],
+        # o_device['product_id'],
     )
     device.set_nonblocking(True)
 
